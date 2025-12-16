@@ -170,7 +170,7 @@ if (isset($_GET['logout'])) {
         </div>
 
         <!-- ✅ SOCIETY SELECTION (ONLY ADDITION) -->
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label>Select Society to Work In</label>
             <select name="society" required>
                 <option value="">Select Society</option>
@@ -183,7 +183,7 @@ if (isset($_GET['logout'])) {
                 }
                 ?>
             </select>
-        </div>
+        </div> -->
 
         <div class="form-group">
             <label>Skill Type</label>
