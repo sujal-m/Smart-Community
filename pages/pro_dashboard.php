@@ -63,7 +63,6 @@ if (isset($_POST['order_action'])) {
     exit();
 }
 
-/* ===== Fetch Society Requests ===== */
 $statusStmt = $conn->prepare("
     SELECT a.admin_name, ap.status
     FROM admin_professional ap
@@ -74,7 +73,6 @@ $statusStmt->bind_param("i", $pro_id);
 $statusStmt->execute();
 $society_requests = $statusStmt->get_result();
 
-/* ===== Check approval ===== */
 $approved_check = $conn->query("
     SELECT 1 
     FROM admin_professional 
