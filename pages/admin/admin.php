@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
-    header("Location: admin_dashboard.php");
-} else {
+if (!isset($_SESSION['admin_logged_in'])) {
     header("Location: admin_login.php");
+} else {
+    header("Location: admin_dashboard.php");
 }
 exit();
